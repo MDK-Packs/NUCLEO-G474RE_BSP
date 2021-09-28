@@ -7,7 +7,7 @@
   <repository type="git">https://github.com/MDK-Packs/NUCLEO-G474RE_BSP.git</repository>
 
   <releases>
-    <release version="0.1.0-dev0">
+    <release version="1.0.0" date="2021-09-28">
       Board description and documentation for NUCLEO-G474RE
       Synchronized with STM32CubeG4 Firmware Package version V1.4.0
       Drivers:
@@ -38,7 +38,7 @@
       <description>STMicroelectronics STM32G474 Devices</description>
       <require Dvendor="STMicroelectronics:13" Dname="STM32G474*"/>
     </condition>
-    
+
     <!-- NUCLEO-G474RE BSP Conditions -->
     <condition id="NUCLEO-G474RE BSP">
       <description>STMicroelectronics NUCLEO-G474RE BSP</description>
@@ -99,7 +99,7 @@
       <book category="manual"    name="https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-mb1367-stmicroelectronics.pdf" title="User Manual" public="true"/>
       <book category="schematic" name="https://www.st.com/resource/en/schematic_pack/mb1367-g474re-c04_schematic.pdf" title="Schematics" public="true"/>
       <book category="other"     name="Documents/README.md" title="Guide" public="true"/>
-      <mountedDevice    deviceIndex="0" Dvendor="STMicroelectronics:13" Dname="STM32G474RETx"/> 
+      <mountedDevice    deviceIndex="0" Dvendor="STMicroelectronics:13" Dname="STM32G474RETx"/>
       <compatibleDevice deviceIndex="0" Dvendor="STMicroelectronics:13" DsubFamily="STM32G474"/>
       <feature type="ODbg"      n="1"              name="On-board ST-LINK-V3E"/>
       <feature type="PWR"       n="4"              name="USB VBUS, ext. VIN, ext. 5V, ext +3.3V"/>
@@ -114,7 +114,7 @@
     </board>
   </boards>
 
-  <examples> 
+  <examples>
     <example name="Blinky" doc="README.md" folder="Projects/Blinky">
       <description>CMSIS-RTOS2 Blinky example with VIO</description>
       <board name="NUCLEO-G474RE" vendor="STMicroelectronics"/>
