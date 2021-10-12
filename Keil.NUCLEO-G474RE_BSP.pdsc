@@ -7,6 +7,9 @@
   <repository type="git">https://github.com/MDK-Packs/NUCLEO-G474RE_BSP.git</repository>
 
   <releases>
+    <release version="1.0.1-dev0">
+      Update Platform example (blocking stdin_getchar in stdio retarget)
+    </release>
     <release version="1.0.0" date="2021-09-28">
       Board description and documentation for NUCLEO-G474RE
       Synchronized with STM32CubeG4 Firmware Package version V1.4.0
