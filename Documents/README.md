@@ -22,3 +22,19 @@ vioBUTTON0        | vioSignalIn.0  | GPIO C.13: Button USER                     
 vioLED0           | vioSignalOut.0 | GPIO A.5:  LD2 GREEN                           |
 
 Refer to the [schematics](#schematics) for board connection information.
+
+## ST-LINK driver installation and firmware upgrade
+
+1. Download the latest [ST-LINK driver](https://www.st.com/en/development-tools/stsw-link009.html) (Windows only).
+2. Extract the archive and run `dpinst_amd64.exe`. Follow the displayed instructions.
+3. Download the latest [ST-LINK firmware upgrade](https://www.st.com/en/development-tools/stsw-link007.html) (Linux/Mac OS/Windows).
+4. Extract the archive and run the STLinkUpgrade application.
+5. Connect the board to your PC using a USB cable and wait until the USB enumeration is completed.
+6. In the **ST-Link Upgrade** program, press the **Device Connect** button.
+7. The current ST-LINK version should be displayed.
+8. Press the **Yes >>>>** button to start the firmware upgrade process.
+
+## Technical references
+
+- [STM32G474RE microcontroller](https://www.st.com/en/microcontrollers-microprocessors/stm32g474re.html)
+- [NUCLEO-G474RE](https://www.st.com/en/evaluation-tools/nucleo-g474re.html)
