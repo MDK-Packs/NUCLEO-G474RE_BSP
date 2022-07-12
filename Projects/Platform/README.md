@@ -49,6 +49,7 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 | APB1                    | 170 MHz
 | APB2                    | 170 MHz
 | To LPUART1              | 170 MHz
+| To USART1               | 170 MHz
 
 ### GPIO Configuration and usage
 
@@ -56,6 +57,8 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 |:------------|:---------------|:----------------------------------------------|:-----
 | PA2         | LPUART1_TX     | Alternate Function, Speed=Very High           | ST-LINK Virtual COM port (VCP_TX)
 | PA3         | LPUART1_RX     | Alternate Function, Speed=Very High           | ST-LINK Virtual COM port (VCP_RX)
+| PC4         | USART1_TX      | Alternate Function, Speed=Very High           | Arduino UNO R3 pin D1 (TX)
+| PC5         | USART1_RX      | Alternate Function, Speed=Very High           | Arduino UNO R3 pin D0 (RX)
 | PC7         | ARDUINO_IO_D9  | Input mode                                    | Arduino UNO R3 pin D9
 | PB6         | ARDUINO_IO_D10 | Output Push Pull, Level=High, Speed=Very High | Arduino UNO R3 pin D10
 | PC13        | vioBUTTON0     | not configured via CubeMX                     | Button USER
@@ -76,12 +79,14 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 | Debug monitor                           | 0                | Generate IRQ handler
 | Pendable request for system service     | 0                | none
 | Time base: System tick timer            | 0                | none
+| USART1 global interrupt                 | 8                | Generate IRQ handler, Call HAL handler
 
 ### Connectivity Peripherals Configuration
 
 | Peripheral   | Mode / Settings                                                                                                    | IRQ | DMA                                             | Note
 |:-------------|:-------------------------------------------------------------------------------------------------------------------|:----|:------------------------------------------------|:----
 | LPUART1      | Asynchronous, Hardware Flow Control=off, Baud Rate: 115200 Bits/s, Word Length: 8 Bits, Parity: None, Stop Bits: 1 | no  | no                                              | ST-LINK Virtual COM port
+| USART1       | Asynchronous, Hardware Flow Control=off                                                                            | yes | no                                               | Arduino UNO R3 connector (CN10)
 
 **STDIO** is routed to ST-LINK Virtual COM port (LPUART1)
 
@@ -89,7 +94,7 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 
 | CMSIS-Driver | Peripheral
 |:-------------|:----------
-|              | 
+| USART1       | USART1
 
 | CMSIS-Driver VIO  | Physical board hardware
 |:------------------|:-----------------------
