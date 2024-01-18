@@ -76,6 +76,7 @@ extern void app_initialize (void);
 #define T_SWO_GPIO_Port GPIOB
 #define ARDUINO_IO_D10_Pin GPIO_PIN_6
 #define ARDUINO_IO_D10_GPIO_Port GPIOB
+
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
